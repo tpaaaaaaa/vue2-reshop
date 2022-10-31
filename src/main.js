@@ -1,8 +1,17 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 
-Vue.config.productionTip = false
+import TypeNav from '@/views/Home/TypeNav';
+import CarouselChart from '@/components/CarouselChart';
+
+Vue.component(TypeNav.name, TypeNav);
+Vue.component(CarouselChart.name, CarouselChart);
+
+import router from '@/router';
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+	render: (h) => h(App),
+	router,
+}).$mount('#app');
