@@ -4,7 +4,7 @@
         <div class="sortList clearfix">
             <div class="center">
                 <!--banner轮播-->
-                <CarouselChart :imgUrls="imgUrls"></CarouselChart>
+                <CarouselChart :bannerList="bannerList"></CarouselChart>
             </div>
             <div class="right">
                 <div class="news">
@@ -89,8 +89,16 @@
     </div>
 </template>
 <script>
+import { mapState } from 'vuex';
 export default {
     name: 'ListContainer',
+    beforeCreate() {
+        this.$store.dispatch('home/getBannerList');
+    },
+    computed: {
+
+        ...mapState('home', ['bannerList'])
+    },
     data() {
         return {
             imgUrls: {

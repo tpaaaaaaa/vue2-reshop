@@ -6,7 +6,6 @@
         <ProductRank></ProductRank>
         <ProductLike></ProductLike>
         <ProductFloor></ProductFloor>
-        <ProductFloor></ProductFloor>
         <ProductBrand></ProductBrand>
     </div>
 </template>
